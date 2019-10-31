@@ -8,8 +8,9 @@ require 'directors_database'
 def directors_totals(nds)
   result = {}
   row_index = 0 
-  
-  result[nds[row_index][:name]] = gross_for_director(nds[row_index][:name]) # add key and value to result hash
+  while row_index < nds.length do 
+    result[nds[row_index][:name]] = gross_for_director(nds[row_index][:name]) # add key and value to   result hash
+  end 
   result
 end
 
