@@ -7,7 +7,11 @@ require 'directors_database'
 
 def directors_totals(nds)
   result = {}
-  gross_for_director(nds[row_index][:name])
+  row_index = 0 
+  while row_index < nds.length do 
+    gross_for_director(nds[row_index][:name])
+    row_index += 1 
+  end 
   result
 end
 
