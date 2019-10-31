@@ -12,14 +12,19 @@ def directors_totals(nds)
     gross_for_director(nds[row_index][:movies])
     row_index += 1 
   end 
+  result[nds[row_index][:name]] = 
   result
 end
 
 # Find a way to accumulate the :worldwide_grosses and return that Integer
 # using director_data as input
 def gross_for_director(director_data)
+  total = 0 
   movies_index = 0 
   while movies_index < director_data.length do 
-    
+    # add movie gross to total
+    total += nds[row_index][:movies][movies_index][:worldwide_gross]
+    movies_index += 1 
   end 
+  total 
 end
