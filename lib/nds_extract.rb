@@ -7,7 +7,7 @@ require 'directors_database'
 
 def directors_totals(nds)
   result = {}
-  result[nds]
+  result[nds[row_index][:name]] = gross_for_director(nds) # add key and value to result hash
   result
 end
 
