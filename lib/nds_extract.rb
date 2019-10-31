@@ -23,5 +23,4 @@ def gross_for_director(director_data)
     movies_index += 1 
   end
   result[nds[row_index][:name]] = total # add key and value to result hash
-  row_index += 1 
 end
