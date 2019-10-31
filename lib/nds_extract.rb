@@ -19,7 +19,7 @@ def gross_for_director(director_data)
   movies_index = 0 
   while movies_index < movies_num do 
     # add movie gross to total
-    total += director_data
+    total += director_data[movies_index][:worldwide_gross]
     movies_index += 1 
   end
   result[nds[row_index][:name]] = total # add key and value to result hash
