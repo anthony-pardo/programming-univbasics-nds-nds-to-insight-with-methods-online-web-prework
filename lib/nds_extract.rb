@@ -7,6 +7,7 @@ require 'directors_database'
 
 def directors_totals(nds)
   result = {}
+  result[nds]
   result
 end
 
@@ -14,5 +15,13 @@ end
 # using director_data as input
 def gross_for_director(director_data)
   # loop through movies of the director_data
-  
+  total = 0 
+  movies_index = 0 
+  while movies_index < movies_num do 
+    # add movie gross to total
+    total += nds[row_index][:movies][movies_index][:worldwide_gross]
+    movies_index += 1 
+  end
+  result[nds[row_index][:name]] = total # add key and value to result hash
+  row_index += 1 
 end
